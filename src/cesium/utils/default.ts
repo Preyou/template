@@ -1,0 +1,17 @@
+export const viewerConstructorOptions = Object.freeze({
+  animation: false,
+  baseLayer: false,
+  baseLayerPicker: false,
+  fullscreenButton: false,
+  geocoder: false,
+  homeButton: false,
+  infoBox: false,
+  navigationHelpButton: false,
+  navigationInstructionsInitiallyVisible: false,
+  scene3DOnly: true,
+  sceneModePicker: false,
+  selectionIndicator: false,
+  shadows: true,
+  showRenderLoopErrors: import.meta.env.DEV,
+  timeline: false,
+} satisfies Cesium.Viewer.ConstructorOptions)
