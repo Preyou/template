@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
@@ -46,7 +46,9 @@
     "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-router": "^0.8.4",
     "vite": "^5.0.11",
+    "vite-plugin-dynamic-base": "^1.0.2",
     "vite-plugin-pages": "^0.32.0",
+    "vite-plugin-singlefile": "^2.0.0",
     "vite-plugin-static-copy": "^1.0.1",
     "vite-plugin-vue-devtools": "^7.0.15",
     "vite-tsconfig-paths": "^4.3.1",

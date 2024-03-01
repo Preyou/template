@@ -41,6 +41,9 @@ export default antfu({
   },
 
   typescript: {
+    overrides: {
+      'ts/no-floating-promises': 'off',
+    },
     tsconfigPath: 'tsconfig.app.json',
   },
   // ],

@@ -16,6 +16,7 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 import UnoCSS from 'unocss/vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 const cesiumSource = 'node_modules/cesium/Build/Cesium'
 const cesiumBaseUrl = 'cesiumStatic'
@@ -29,9 +30,15 @@ export default defineConfig({
     VueDevTools(),
     VueRouter({
       dts: './types/auto/vue-router.d.ts',
+      routesFolder: [
+        {
+          src: 'src/views/pages',
+        },
+      ],
     }),
     vue(),
     vueJsx(),
+    // viteSingleFile(),
     AutoImport({
       dts: './types/auto/auto-imports.d.ts',
       eslintrc: {
